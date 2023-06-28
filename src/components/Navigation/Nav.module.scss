@@ -1,0 +1,40 @@
+.header{
+    background-color: white;
+    box-shadow: 0px 0px 6px gray;
+    width: 100vw;
+}
+.nav{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .barNav{
+        width: 150px;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all .3s ease-out;
+        border-radius: 5px;
+        background: linear-gradient(rgb(45, 106, 224) 0%, rgb(29, 80, 213) 100%);
+    }
+    ul{
+        display: flex;
+        li{
+            &:hover > .navContent{
+                display: block;
+            }
+            .navTitle{
+                cursor: pointer;
+                padding: 20px
+            }
+            .navContent{
+                position: absolute;
+                min-height: 50vh;
+                background: linear-gradient(rgb(45, 106, 224) 0%, rgb(29, 80, 213) 100%);
+                display: none;
+            }
+        }
+    }
+}
