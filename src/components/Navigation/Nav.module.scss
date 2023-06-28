@@ -9,18 +9,25 @@
     display: flex;
     align-items: center;
     position: relative;
-    .barNav{
-        width: 150px;
-        height: 3px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        transition: all .3s ease-out;
-        border-radius: 5px;
-        background: linear-gradient(rgb(45, 106, 224) 0%, rgb(29, 80, 213) 100%);
+    .title{
+        padding: 10px 20px;
     }
     ul{
         display: flex;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        .barNav{
+            width: 50px;
+            height: 3px;
+            position: absolute;
+            display: none;
+            bottom: 0;
+            left: 0;
+            transition: all .3s ease-out;
+            border-radius: 5px;
+            background: linear-gradient(rgb(45, 106, 224) 0%, rgb(29, 80, 213) 100%);
+        }
         li{
             &:hover > .navContent{
                 display: block;
@@ -30,10 +37,14 @@
                 padding: 20px
             }
             .navContent{
-                position: absolute;
-                min-height: 50vh;
+                position: fixed;
+                height: 60vh;
+                width: 1200px;
+                left: calc((100vw - 1200px)/2);
                 background: linear-gradient(rgb(45, 106, 224) 0%, rgb(29, 80, 213) 100%);
                 display: none;
+                border-radius: 0 0 10px 10px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
             }
         }
     }

@@ -1,7 +1,12 @@
 export default function NavProduct(){
     return(
         <div>
-            Content product
+            <div>
+                Nav Product left
+            </div>
+            <div>
+                content right
+            </div>
         </div>
     )
 }
